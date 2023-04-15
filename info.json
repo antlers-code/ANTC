@@ -1,9 +1,7 @@
 {
-    "author" : "Antlers",
-
-    "project" : "ANTC+",
-    "version" : "0.0.1",
-    "ver-date" : "4/14/2023",
-
-    "description" : "Java-based compiler for the homecooked staticly-typed language ANT, compiling directly to the Fx86 architecture for factorio computers."
+    "author": "Antlers",
+    "project": "ANTC+",
+    "version": "0.0.2",
+    "ver-date": "4/14/2023",
+    "description": "Java-based compiler for the homecooked staticly-typed language ANT, compiling directly to the Fx86 architecture for factorio computers."
 }
