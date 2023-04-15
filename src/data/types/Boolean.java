@@ -18,6 +18,10 @@ public class Boolean implements Primitive {
         stackFrame.append(this, iStack);
     }
 
+    public void set(boolean o, InstructionStack iStack) {
+        
+    }
+
     public void and(Boolean o, InstructionStack iStack) {
         o.putValue(1, iStack);
         this.putValue(0, iStack);
@@ -40,13 +44,17 @@ public class Boolean implements Primitive {
         o.putValue(1, iStack);
         this.putValue(0, iStack);
 
-        iStack.push(Instruction.AND_RR.opCode, 0, 1);
+        iStack.push(Instruction.XOR_RR.opCode, 0, 1);
 
         iStack.push(Instruction.PUT_PR.opCode, 2, 0);
     }
 
     public void not(InstructionStack iStack) {
         this.putValue(0, iStack);
+
+        iStack.push(Instruction.SFW.opCode, Instruction.XOR_RI.opCode, 0, 255);
+
+        iStack.push(Instruction.PUT_PR.opCode, 2, 0);
     }
 
     @Override
