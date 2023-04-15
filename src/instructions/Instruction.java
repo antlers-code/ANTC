@@ -76,6 +76,7 @@ public enum Instruction {
 
     PUT_MR(0x34, 2),
     PUT_PR(0x35, 2), // Moves a value into a back into memory given a pointer in a specified register
+    PUT_PI(0x36, 2),
 
     PUSH(0x36, 1),
     POP(0x37, 1),
